@@ -1,0 +1,12 @@
+gfxoffsety=0
+gfxsplitheight=256
+frames=8
+speed=0
+nogravity=1
+playerblock=1
+playerblocktop=1
+npcblock1=1
+npcblocktop=1
+immortal=1
+nohurt=1
+scripts=##rd_blank

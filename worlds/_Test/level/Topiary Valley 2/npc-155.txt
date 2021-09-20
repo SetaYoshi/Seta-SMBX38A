@@ -1,0 +1,10 @@
+playerblock=1
+playerblocktop=1
+npcblock=1
+npcblock1=1
+npcblocktop=1
+noblockcollision=0
+grabside=0
+grabtop=0
+nogravity=1
+scripts=##DarkBrickFX

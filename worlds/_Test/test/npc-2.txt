@@ -1,0 +1,2 @@
+smallhitbox=0
+playerblock=2

@@ -1,0 +1,15 @@
+gfxheight=64
+gfxoffsety=0
+gfxsplitheight=128
+frames=2
+height=64
+speed=0
+nogravity=1
+npcblock=0
+spinjump=0
+jumphurt=1
+shoehurt=0
+spinjumphurt=1
+yoshihurt=0
+immortal=1
+nohurt=1

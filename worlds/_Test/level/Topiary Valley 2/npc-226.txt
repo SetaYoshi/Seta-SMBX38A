@@ -1,0 +1,8 @@
+gfxwidth=64
+gfxheight=64
+gfxoffsety=24
+frames=1
+framestyle=3
+width=16
+height=16
+scripts=seed-stem-sheets

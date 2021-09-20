@@ -1,0 +1,4 @@
+gfxheight=34
+gfxwidth=36
+frames=20
+framespeed=2

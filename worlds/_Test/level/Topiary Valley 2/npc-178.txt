@@ -1,0 +1,10 @@
+nogravity=1
+nohurt=1
+npcblockcollision=0
+npcblocktop=0
+grab=0
+foreground=0
+npcblock=0
+playerblock=0
+jumphurt=0
+frames=1

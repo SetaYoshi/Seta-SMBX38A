@@ -1,0 +1,17 @@
+framespeed=6
+speed=1.39999997615814
+noyoshi=1
+health=3
+jumpdmg=1
+hammerdmg=2
+shelldmg=2
+sworddmg=2
+lavadmg=-1
+explosiondmg=2
+blockhitdmg=0
+tailspindmg=1
+yoshitransform=352
+frozentransform=352
+jumptransform=352
+score=0
+scripts=##bumperbeetle

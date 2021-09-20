@@ -1,0 +1,3 @@
+gfxwidth=330
+gfxheight=132
+frames=1

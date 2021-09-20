@@ -1,0 +1,15 @@
+gfxwidth=32
+gfxheight=32
+gfxsplitheight=128
+frames=4
+width=32
+height=32
+speed=0
+playerblock=1
+playerblocktop=1
+npcblock=1
+npcblock1=1
+npcblocktop=1
+immortal=1
+nohurt=1
+scripts=##rd_blank

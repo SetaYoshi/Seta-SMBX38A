@@ -1,0 +1,11 @@
+gfxwidth=48
+gfxheight=32
+gfxoffsety=0
+gfxsplitheight=384
+frames=4
+framespeed=8
+framestyle=1
+directivegfx=0
+width=32
+height=32
+scripts=sushi

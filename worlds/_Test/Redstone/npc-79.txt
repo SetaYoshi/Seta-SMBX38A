@@ -1,0 +1,13 @@
+gfxsplitheight=32
+width=32
+nogravity=1
+playerblock=1
+playerblocktop=1
+npcblock=1
+npcblock1=1
+npcblocktop=1
+noblockcollision=1
+jumphurt=1
+spinjumphurt=1
+immortal=1
+nohurt=1

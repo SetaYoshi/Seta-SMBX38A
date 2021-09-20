@@ -1,0 +1,9 @@
+gfxwidth=64
+gfxheight=64
+gfxsplitheight=64
+width=64
+height=64
+speed=0
+nogravity=1
+noblockcollision=1
+scripts=rd_blank

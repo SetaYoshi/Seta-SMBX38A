@@ -1,0 +1,5 @@
+nogravity=0
+health=11
+jumpdmg=1
+lavadmg=1
+scripts=##npc_test

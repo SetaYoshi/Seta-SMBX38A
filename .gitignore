@@ -4,3 +4,6 @@
 !/_other/
 /_other/SMBX 38A Previous Versions/*
 
+!/worlds/
+/worlds/*
+!/worlds/_Test/

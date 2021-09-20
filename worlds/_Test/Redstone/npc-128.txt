@@ -1,0 +1,10 @@
+gfxheight=32
+gfxsplitheight=32
+frames=1
+foreground=1
+height=32
+nogravity=1
+npcblock=0
+noblockcollision=1
+immortal=1
+scripts=RS_note

@@ -1,0 +1,2 @@
+iceballdmg=-1
+frozentime=-1

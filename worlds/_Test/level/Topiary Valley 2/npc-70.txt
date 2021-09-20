@@ -1,0 +1,13 @@
+gfxwidth=64
+gfxheight=16
+frames=8
+framestyle=3
+width=16
+height=16
+score=0
+playerblocktop=0
+npcblock=0
+npcblock1=0
+nohurt=1
+immortal=1
+scripts=seed-stem-sheets

@@ -1,0 +1,11 @@
+gfxoffsety=0
+frames=1
+speed=0
+nogravity=0
+grabside=1
+jumphurt=1
+nohurt=1
+fireballdmg=0
+jumpdmg=0
+hammerdmg=0
+scripts=teleporterbeacon

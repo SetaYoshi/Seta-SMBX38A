@@ -1,0 +1,5 @@
+gfxwidth=8
+gfxheight=8
+width=8
+height=8
+scripts=npc

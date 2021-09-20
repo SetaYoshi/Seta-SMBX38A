@@ -1,0 +1,8 @@
+width=32
+height=32
+gfxwidth=32
+gfxheight=32
+speed=0
+framestyle=0
+score=1
+noyoshi=1

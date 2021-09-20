@@ -1,0 +1,11 @@
+gfxwidth=32
+gfxheight=32
+gfxsplitheight=32
+width=32
+height=32
+speed=0
+nogravity=1
+noblockcollision=0
+immortal=1
+nohurt=1
+scripts=rd_blank

@@ -1,0 +1,6 @@
+gfxsplitheight=128
+frames=4
+framespeed=8
+playerblock=0
+npcblock1=0
+scripts=##rd_blank
