@@ -1,8 +1,6 @@
 /*
 !.gitignore
 
-!/SMBX38A
-/SMBX38A/*
-!/SMBX38A/_other/
-/SMBX38A/_other/SMBX 38A Previous Versions
+!/_other/
+/_other/SMBX 38A Previous Versions/*
 
