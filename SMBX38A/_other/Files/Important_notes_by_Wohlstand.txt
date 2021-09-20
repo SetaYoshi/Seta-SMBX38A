@@ -1,0 +1,128 @@
+|||||||||||||||Super Mario Bros X 1.4.2 Readme by Wohlstand|||||||||||||||
+==Contents==
+- Intro
+- Download links
+- How to get it running
+- Command line arguments
+
+==========================================================
+                  Intro
+==========================================================
+Hello!
+
+Me (Wohlstand) and Kevsoft are downloaded from Chinese server package of SMBX 1.4.1.
+It is not official version, but we are will try to contact with
+developer of that to get source code. It has a lot of new things (some of those
+things are already implemented in the PGE Editor and in the PGE Engine),
+
+but some old things are buggy or not working:
+for example,
+- Sizable blocks size is limited, so, 
+  super-huge blocks which worked in SMBX 1.3 fine, will has reduced size in SMBX 1.4.1!
+- to exit from level test in the editor, you must use [Pause] control key instead of direct [Esc] key!
+- New File formats are NOT compatible with classic SMBX and PGE currently upcoming to support them
+
+but Chinese SMBX can:
+- open SMBX64-standard LVL/WLD Files (files from SMBX 1.3).
+	However it automatically converts them into own format. BE CAREFUL AND MAKE BACKUPS!
+- Supports PNG CGFX
+- More music formats (because Wohlstand's SDL Mixer X audio library has been used)
+- Direct X render has been used
+- Super-fast loading of game/editor
+etc.
+
+More other things you are can retrive yourself.
+
+Good luck ;-)
+
+Video demo of this treasure (legacy SMBX 1.4.1):
+==========================================================
+http://www.youtube.com/watch?v=n2nsvRlgdDk - First experiment on VirtualBox
+==========================================================
+https://www.youtube.com/watch?v=9oxiHOIfHPM - Showcase made by Bossedit8
+==========================================================
+
+More detail info:
+==========================================================
+http://wohlsoft.ru/pgewiki/Super_Mario_Bros._X_by_38A
+==========================================================
+
+==========================================================
+                   Download links:
+==========================================================
+Mirror 1 (My server):
+http://wohlsoft.ru/docs/SMBX_38A/smbx38a-1-4-4.7z
+
+Mirror 2 (Yandex Disk, Faster):
+https://yadi.sk/d/OMUm-shI3ESX7h
+
+==========================================================
+                  How to get it running
+==========================================================
+Tested on:
+* Windows XP SP3 x86
+* Windows 7 x64
+* Windows 8.1
+
+If you have troubles to run, found bugs or imperfections, please report it to forums
+(if that wasn't already reported) http://wohlsoft.ru/forum/viewforum.php?f=58
+5438A38A should fix that error or I (Wohlstand) will forward your report to him ;-)
+
+Also suggestes: Also try to delete config.dat file after applying of some changes
+
+----------------------------------------------------
+                 VirtualBox notes:
+----------------------------------------------------
+- you must install Guest add-ons and also "Direct 3D (experimental)" support
+(to install that you must reboot Windows XP and turn it into safe mode
+	[F8 key before boot] and choice safe mode)
+- You must enable 2D and 3D acceleration in virtual machine preferences ("System" tab)
+
+----------------------------------------------------
+                 VMWare notes
+----------------------------------------------------
+- Not tested yet, but you must have support of 2d/3D acceleration
+
+
+==========================================================
+     Command line arguments
+==========================================================
+
+A new update of smbx.exe can launch episode or level test from command line
+(or just drag smbx file to smbx.exe)
+
+Command syntax:
+
+         smbx.exe filepath [mode p1id p2id]
+
+modes: 
+    For LVL files:
+	0 - 1p mode (Works by Default)
+	1 - 2p mode 
+	2 - battle mode
+
+For WLD files:
+        1 - Launch save 1 (Works by Default)
+        2 - Launch save 2
+        3 - Launch save 3
+
+p1id, p2id:
+       -from 0 to 5 (0=NULL 1=Mario 2=Luigi 3=peach 4=toad 5=link)
+
+examples:
+
+Launch a test of the "test.lvl" in a battle mode with Mario and Luigi:
+	smbx.exe d:\smbx\worlds\test.lvl 2 1 2
+
+Launch a test of the "anoying-place.lvl" in a 1 players mode with Toad:
+	smbx.exe d:\smbx\worlds\anoying-place.lvl 1 4 0
+
+Launch a test of the world.wld with save 1 and with 1 player mode, with Mario:
+	smbx.exe "worlds\the invasion 2\world.wld"
+
+Launch a test of the world.wld with save 1 and with 2 player mode, with Peach and Mario:
+	smbx.exe "worlds\the invasion 2\world.wld" 1 3 1
+
+Launch a test of the world.wld with save 1 and with 1 player mode, with Link:
+	smbx.exe "worlds\the invasion 2\world.wld" 1 5 0
+

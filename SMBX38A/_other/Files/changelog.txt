@@ -1,0 +1,507 @@
+Super Mario Bros. X Changelog.
+
+Changes for 1.4.4:
+
+Engine Updates
+-The editor got a UI revamp, no longer attempting to fit into the legacy SMBX 1.3 style.
+-Updated the script engine.
+
+Blocks
+-You can now attach wings to blocks. The movement pattern of blocks varies according to the type of wings.
+     -If you want to let a large chunk of blocks move together, make big (in size) blocks using the custom blocks function and place them, instead of placing a bunch of small blocks.
+-Added some new customable properties to blocks.
+-Custom blocks that applies to the world map is now supported.
+-Supersized (HUGE) platforms are supported again.
+-Added OnScreen event for blocks that triggers every frame as long as the block is on the screen. (Overusing this event is not advised)
+-Built-in events for blocks can be configured to run scripts directly and some of the events has now more parameters that can be acquired by scripts.
+
+Backgrounds
+-Custom background objects that applies to the world map is now supported.
+
+NPCs
+-You can now attach wings to NPCs. The movement pattern of NPCs varies according to the type of wings.
+-The actual size of NPC-56 (Clown Car) can now be changed according to the custom NPC settings.
+-There are more NPCs that can be shot by Fire Piranha Plants, and NPC-52 can now shoot NPCs.
+-NPC-42 (Eerie) can now move vertically.
+-Bullet Bills can now be configured to chase players.
+-Added some new custom NPC options.
+-Big NPCs can no longer directly have parachutes attached on them or be put into bubbles, as this feature is commonly reported as a bug.
+-Built-in events for NPCs can be configured to run scripts directly and some of the events has now more parameters that can be acquired by scripts.
+
+Warps
+-Added transition effects for door type and pipe type (in the same section only) warps.
+-Built-in events for warps can be configured to run scripts directly and some of the events has now more parameters that can be acquired by scripts.
+
+Liquids
+-Added several new types of liquids.
+-Added some new options to the force direction of liquid force fields.
+
+Event and Layer
+-Added a new special event: Screen Shake.
+-Added a new special event: Pause at Status Change: Any objects stop moving when the status of characters is changing.
+
+Misc
+-Custom effects that applies to the world map is now supported.
+-You can now fully customize the object selection windows. NPCs, blocks and other objects of different types can now be put in a single window.
+-The level editing window can now be resized. This only affects the editing process.
+-Changed the UI style of the editor and the editor interface got an overhaul.
+-The auto paint tool is now fully customizable and supports more objects. Objects with GFX expansions now works well with this tool.
+-Section boundaries is now recognized by the auto paint tool as blocks to attach.
+-More image formats are now supported by the level image exporting function.
+-You can now apply sound effect customizations to levels individually.
+-The special BGM of P-switches, Stop Watches, Super Stars and Mega Mushrooms can now be customized.
+-The values of global variables can now be changed in the variable window when testing a level.
+-Improved the script editor, added some keyword hints.
+-Reworked the object swapping tool. You can set multiple swap results and even probabilities of each.
+-Reworked the level boundary tool and merged the Reset Camera menu item with this.
+-Reworked the object counter in Debugger. You can now customize the types of objects to be counted.
+-Auto paint mode now works well with flip tools.
+-Selection tools now works in world map editing mode.
+-Added pop-up selection boxes for convenient selection when inputting or finding IDs of objects.
+-Added pop-up selection boxes when a certain file name needs to be inputted.
+-The reserved items will no longer always drop from the middle of the screen when custom HUD configurations are active, the drop position is determined automatically.
+-Removed the music test feature in World Editor. This feature is moved and merged to Music Manager. You can change the paths of default music files and the music that plays when editing levels.
+     -If a custom background music is playing when editing levels, the music will not stop even if the game window lost focus.
+-Replaced language files with Editor Language Configuration Tool, where all strings that you see in the editor will be automatically listed, and you can translate them into other languages.
+     -Most changes will be applied after restarting the editor, and some changes will take effect instantly. Besides, you can export your translations as files to share with others.
+     -Only loaded strings will be recorded, and newly found strings will be appended to the string list. Therefore, opening (and closing) all windows in the editor is suggested before you translate.
+     -Every translated string will have an generated unique ID associated. When the game updates, outdated translated strings will not be loaded and unchanged strings will work as usual.
+-Added Recent Levels so you can open recently opened levels conveniently.
+-Changing sections and pressing 'Esc' key to stop level testing no longer resets the editor camera.
+-Added Preference Settings to the editor. The editor can now memorize some preferences of users, but this will make the editor take more time (a few seconds) to launch for the first time.
+-Added Default Graphics Editing Tools for configuring object customization interfaces.
+-Global string variables are stored in the save file, the same as global value variables.
+-The main game now supports "windowed fullscreen" mode.
+-Slightly adjusted the physics.
+-Levels that have scripts with compile errors can no longer be loaded in the main game, but are still playable in the editor by disabling the scripts with problems.
+
+Bugs
+-Fixed the bug that Goal Poles do not work with world maps.
+-Fixed the bug that some resource files can not be properly loaded under certain circumstances.
+-Fixed the bug that some custom configurations on Effects are not working in some situations.
+-Fixed the bug that the option to disable the intro animation when warping between levels is not working.
+-Fixed some more bugs that have ever existed for a long time.
+
+Changes for 1.4.3:
+
+Engine Updates
+-Added the GFX expansion feature. A single object in the game can now have up to 65536 different GFXs. Tiles, scenes, paths, levels, blocks, backgrounds, NPCs and effects are all supported.
+     -From now on, there won't be any objects with the same function but different GFXs (like re-colored versions of a block) in a new update. You can manually add them using this feature.
+     -Objects with this feature enabled will show a GFX-selection window in the editor when selected. Click on the icons in the window to make your choice.
+     -You can drag the window to a proper place or double-click its status bar to minimize it if you find it disturbing.
+-Updated the script engine.
+
+Block
+-Added slope platforms and oneway gates. Enable them in Custom Blocks.
+-You can now set different physics for players and NPCs.
+-Adjusted the physics of slopes.
+-You can now customize the graphics and physics of blocks. Added the Custom-Block Editor with a GUI, Right-click the icon of the object to open the customization window.
+-You can now stretch the graphics of a single block in the level.
+-Added the 'name' property for blocks.
+-Added advanced settings for the contents of blocks. Right-click the content picture to reveal them.
+
+NPC
+-Added the Custom-NPC Editor with a GUI, Right-click the icon of the object to open the customization window.
+-The GFX expansion feature for NPCs is disabled by default and you can enable it in the Custom-NPC Editor.
+-Added some new Custom NPC codes.
+-Added the 'name' property for NPCs.
+-You can now arm your NPCs with parachutes (SMW). Warning! Attaching parachutes to large-sized NPCs is highly disapproved.
+-Added Baby Yoshies (SMW) and polished them. You can now enable / disable their overpowered abilities in the Advanced NPC Settings panel.
+-Added the Flag Pole (SMB) and the corresponding Level Exit settings in world maps.
+-Added Micro Goombas (SMB3).
+-Added Magikoopas (SMW).
+-Added an option in the Advanced NPC Settings panel for Nipper Plants to turn them to Fire Nipper Plants.
+-Add an option for Piranha Plants to turn them to Ice Piranha Plants.
+-Add an option for Fire Bros to turn them to Ice Bros. You'll use the GFX expansion feature to set their GFXs, though.
+-Add options to modify the explosion range and count down time for SMB2 bombs.
+
+Warp
+-Added two-way warps.
+-Added pipe cannons that fires players out. You can set the projection range.
+
+Background
+-You can now customize the properties of backgrounds. Right-click the icon of the object to open the customization window.
+
+World
+-You can now customize the properties of tiles, scenes and levels. Right-click the icon of the object to open the customization window.
+-Added Game Over Level settings.
+
+Misc
+-Added the wall jump system. You can enable it in special events.
+-Added SMB3 power-up system. You can enable it in special events.
+-You can now add Yoshi eggs to the world map inventory.
+-You can now customize the properties of effects. Find the panel in the Advanced Level Settings.
+-Made the tools in the editor more accurate when drawing lines and rectangles.
+-Added a debug window for to show the debug information outputted by scripts.
+-With light system enabled, the lighted area of players now shrink when they die instead of disappearing instantly.
+-Added a quick way to select the contents of blocks. Left-click the picture box.
+-You can now select objects. Switch the edit mode to 'Selection' and use Rectangle, Line or Circle tools and then you can drag-drop objects.
+-Adjusted the limit of triggering times in a single frame for several Autorun events.
+-Added triggering parameters for Autorun events.
+-You can now make your levels(not episodes) read-only, which means that they can still be opened and played but no longer modified.
+     -You can set multiple permissions for the level, like permissions to cheat, view scripts, observe the level and so on.
+     -The process will encrypt the graphic files and text files but not the music files.
+     -A 256-byte key will be generated right after the encryption. You can use the key to decrypt the level.
+     -You can specify a full access key and anyone who has it will grant the permission to view all contents of the level.
+
+Bugs
+-Fixed the bug in the script engine that may lead to illegal memory access.
+-Fixed the bug in the script engine that may cause 'subscript out of range' crashes when there are syntax errors in a script.
+-Fixed the bug in the script engine associated with the system language that may cause 'subscript out of range' crashes.
+-Fixed errors with the auto paint tool when you place slopes.
+-Fixed the bug preventing the auto-save function.
+-Fixed the bug that level names in packed maps become case-sensitive, also removed automation errors occurring when packing certain maps.
+-Slightly adjusted and optimized the game's physics.
+-Fixed a bunch of bugs that have ever existed for a long time.
+
+Changes for 1.4.2:
+
+Engine Updates
+-Updated DirectX8 to DirectX9.
+-Replaced Gdiplus with Freeimage, so MSCOMCTL.OCX is no longer needed, and the game requires NO dlls to register.
+-Replaced Fmodex with SDL2 Mixer.
+-Greatly improved performance.
+-Layers and events are supported for world maps now.
+-Updated the script engine.
+
+World
+-Upgraded 'Music Components' in world maps to 'Area Components', enabling more functions.
+     -You can now set the boundary of the world map, sailing areas, item-triggered areas and so on.
+     -Area sizes are customable.
+-Upgraded 'Level Components', introducing random movements of levels.
+     -You can set the path and the destinations, and the level will move randomly between destinations.
+     -Added events for level entrance and exit.
+     -Added 'one-time-use' levels.
+     -Added other miscellaneous settings.
+-Add paths toggling the ability of passing every turn.
+-The number of star coins are now shown on the world map.
+-Added events for world maps, with events, you can:
+     -Toggle the state of showing of the layers.
+     -Move the layers around, multiple moving patterns are supported.
+     -Make the events auto-executable with condition settings.
+     -Messages on world maps are now supported.
+     -Use sys(starcoincount) in expressions to get the star coin count.
+-3 new items for world maps are added: Music Box, Anchor and Warp Whistle.
+
+NPC
+-Added balancing lifts (SMB).
+-Added all-direction flamethrowers (SMB3).
+-Added Foo (NSMBWii).
+-Added Springboard (SMM, in SMW style)
+-Added a new Custom NPC Code.
+     -zposition:A float number, determining the showing order of the NPC, ranges from 0 to 1.Set this to 0 will make the NPC shown in the foreground and 1 to make it shown in the background.
+
+Warp
+-Added a new warp style: zero-delay warp(Loop).
+-Some types of the warps have the ability to resize now.
+-Added warps only available for mini characters.
+
+Misc
+-Added the support of custom sound effects affecting the whole world map.
+
+Liquid
+-Added an 'eraser' air fluid erasing all physic effects of other overlapping fluids.
+
+Bugs
+-Many bugs that were not supposed to occur are fixed.
+
+Changes for 1.4.1:
+
+Engine Updates
+-Added the support for global scripts.
+-Added the star coin system.
+-Added replay function, you can record your plays and make record files.
+
+NPC
+-Added Bony Beetle
+-Added Sumo Bro
+-Added Dino-Torch
+-Added Lava Bubbles(SMW, bounces against walls)
+-Added Ptooie
+-Added Broozer
+-Added Fire Piranha(SMB3, in other directions)
+-Added Bubble Baby Yoshi(NSMBWiiU, press 's' key to release bubbles when holding)
+-Added Cannonball
+-Added Springboard(SMM, interactives with NPCs)
+-Added Hammer Bro(SMB3)
+-Added Sledge Bro
+-You can now set the objects thrown by Fire Brothers, Hammer Bros and Bill Blasters.
+-Added new Custom NPC Codes.
+     -frozentime:determines how long the NPC will keep the frozen state.
+     -yoshihurt:determines whether the NPC will take damage by mounted yoshies.
+     -shoehurt:determines whether the NPC will take damage by players in shoes.
+
+Player
+-Frogsuits are available for all characters.
+-Added Blue Shells which are available for all characters.
+-Added Propeller Mushrooms which are available for all characters.
+-Added Mini Mushrooms which are available for all characters.
+-Added Penguin Suits which are available for all characters.
+-Added Mega Mushrooms only available for Mario, Luigi and Toad.
+-Added the hat system: Gold '?' Blocks, Billy Cannons, Flying caps, Goomba caps, Spiny Caps(SMM), Buzzy Beetle Caps(SMM), which are available for all characters.
+     -All the hats remove when the player exits the level, like F.L.U.D.D..
+
+Misc
+-Added the image exporting feature, allowing the images of levels and world maps to be exported in PNG and BMP formats.
+-Added Auto-Painting (aka intelligent editing) mode which will round the boundary of the placed blocks, automatically.
+-Dynamic backgrounds will be disabled if the image size exceeds the maxium image size supported by the graphics card.
+
+Bugs
+-Fixed interface anomalies occurred when DPI is increased.
+-Many bugs that were not supposed to exist are fixed.
+
+Changes for 1.4:
+
+Engine Updates
+-Most game mechanics are inherited from 1.3.0.0
+     -Addition:Some differences between 1.4 and 1.3.0.0:
+               1.Due to the incompatibilities and other reasons,netplay function is temporary disabled.We may re-add it later.
+               2.Number of auto-played characters in title screen is now reduced to one.
+               3.Testing levels in editor in fullscreen mode is no longer supported.
+-Upgraded the graphics engine.Alpha channels are supported now,which means you can use smoother graphics in your levels.
+     -You may not be able to launch the game if DirectX is not available.
+     -There is now a limit to the max size of custom graphics,ANY pixels exceeding the limit will not be drawn.You can check it using the Debugger in editor.Don't worry a lot,4096*4096 is sufficient in normal case.
+-Upgraded the sound system.More file formats are supported now.
+-Optimized the physic engine.
+-Involved the memory management system.Some graphics and musics are only loaded into memory when needed.
+-Added variables.
+-Added scripts.
+-Added MarioPacker(v1.0)
+-Added MarioShop(v1.0)
+
+MarioPacker
+MarioPacker is a built-in program in the editor.It packs and encrypts your episodes,blocking other people hacking them.Use It Wisely.
+     -Only available to episodes with a world map.
+     -Packed maps have an improvement in loading speed and security,and have a smaller file size.
+     -The progress is not reversible.BACK UP FIRST.
+
+MarioShop
+MarioShop is another built-in program.It has image editing functions which makes graphics-making easier.
+
+Events and Layers
+-Names of events and layers can now be any characters,but if you want to use them in scripts,do not use strange characters.
+-Added a way to create NPCs,effects with events and scripts
+-You can insert variables in message boxes.Method:&Val(*variable name*) (Ignore'*')
+-You can move layers in a new way - setting the relative position,which teleports the layer instantly.
+-Canceled the 99 events cap.
+-Canceled the 20 layer operations cap in events.
+-You can now use custom musics in events.
+-Upgraded the auto-scrolling function, the parameters are now dynamic.
+-Timers in events have two timing units (second and frame) now.
+-You can now move more than one layers in a single event.
+-Added some options to character controlling section in events.
+-Added some special events that automatically triggers when certain conditions are met.(AutoRun-Event)
+     -Name list:Level - End,Player - GotHurt,Player - GotItem,Player - GotNPChurt,Player - Swimming,Player - Warping,NPC - Death,NPC - Killed,Timer - Over,etc.
+-Added API layers.Objects in these layers are locked in a special position.
+     -Name list:Att-Player1(*),Att-Player2(*),Att-Screen(*),Att-ScreenII(*).'*' can be any vaild characters.
+     -'Attach to Layer' function is not available to NPCs in these layers.
+-Optimized the Attach to Layer function.Layers and NPCs are now attached with 100% more power.
+-Added some special events that when it triggers,certain functions are executed,like hurting the player.(Special Event)
+-Added AutoStart functions in events.Events are sutomatically triggered when conditions set are met.
+-Many parameters in events can now be expressions.
+     -Local variables, global variables and system variables are supported in the logic system for events.
+-Adden In-game Timer.
+     -When it goes zero and is in 'count down' mode,all characters are killed instantly.You can make an AutoRun-Event(Timer - Over) to prevent this by triggering the event instead.
+     -God mode characters are not affected.
+-A messenger system variable is sent to the event when a event is triggered by a NPC,which can tell your event who triggered the event.
+-You can now right-click an object(textboxes,buttons,etc) in the event editor to get a short helping text.
+
+NPC
+-Added Starman
+-Added Spinning Platform
+-Added Directional Platform
+-Added Firechomp
+-Added Chainchomp
+-Added Penguin
+-Added Fire Brother
+-Added Boomerang Brother
+-Added Fire Piranha
+-Added a way to hide NPCs in a SMW block.
+-Thwomps can now move horizontally.
+-Koopa Troopas can recover itselves from the shell state over time.(Exceptions:Placed koopa shells,SMW ones stomped by player)
+-NPCs swallowed by Yoshies will disappear in 20 seconds.
+-Added a option for SMW jumping piranha plant to determine whether it can pop fireballs.
+-You can put any NPC,small or large,into bubbles.It may look weird when you try to fill bubbles with bowsers,of course.
+-Rotodiscs and firebars can now be customed in many ways.
+-Max size of ice blocks made by ice balls can be set in CNPC code of NPC-263(ice block).
+-Multiple check points can now exist in a single level.You can determine the order by changing the advanced NPC settings.
+-Added NPC events:Grab,Touch,NextFrame(this one is not recommended to use too much)
+-Added 'Send ID to a variable' settings for NPCs to send the permanent NPC ID to a variable.
+-NPC290 NPC195 are now tightly connected to players.
+-P-Switches can no longer turn friendly NPCs into blocks.
+-New settings for NPC generator.
+     -Use frames instead of seconds for the timing unit.
+     -Two setting methods are now available.
+          -Traditional:8 directions available instead of 4.
+          -Custom:4 new options:Shooting angle,shooting branches,shooting speed,shooting range.
+-Added some new Custom NPC codes.
+     -spinjump:can the NPC be killed by spin jumps or not.
+          -To be compatible with jumphurt,this one should be set the same time you set jumphurt.
+     -spinjumphurt:can players get hurt trying spin-jump the NPC.
+     -waterjumphurt:can the NPC be stomped to death under water.
+          -To be compatible with jumphurt,this one should be set the same time you set jumphurt.
+     -nolava:can the NPC be killed by lava.
+     -nohammer:can the NPC be killed by hammers.
+     -health:hitpoints for the NPC,can only be a const.
+     -holdgenerator:makes the NPC hold a NPC generator itself.
+          -Usage:holdgenerator = x , y , id , Delay , Speed , Angle , [Optional L = 1] , [Optional R = 360] , [Optional AC = 1]
+          -Parameters:relative position of NPC(x,y),generating interval,initial speed,initial angle,branches,range,whether the direction changes according to the facing of NPC.
+          -Be careful,you may make lakitus throwing lakitus using this,producing deadly lags.
+     -framestyle:(additions)
+          -framestyle=3  Animations are not played automatically.
+          -framestyle=4  Animations are only played once.
+          -framestyle=5,6,7£ºMuch the same as 0,1,2.Differences:GFX will have a downward offset 'NPC special setting value * NPC original frame number',for example,player fireballs are using this.
+     -fireballdmg:damage taken when hit by fireballs.
+     -jumpdmg:damage taken when hit by stomps.
+     -hammerdmg:damage taken when hit by hammers.
+     -shelldmg:damage taken when hit by shells.
+     -lavadmg:damage taken when hit by lava.
+     -tailspindmg:damage taken when hit by tail spins.
+     -blockhitdmg:damage taken when hit by blocks.
+     -explosiondmg:damage taken when hit by bombs.
+     -float:is the NPC affected by buoyance,only makes sense when nogravity is set to 0,for example,SMB3 platforms are using this.
+
+Liquid
+-You can now specify many physic parameters for liquids.
+-You can now make the hitbox of liquids round.
+-Liquids can now trigger events by touching them with players or NPCs.
+-Added many settings.
+     -Custom liquid:a kind of liquid with custom friction settings.
+     -Gravitional Field:just a 'liquid' without swimming functions.
+     -[Event/Script]Collision Area:triggers events or scripts when characters get in.This kind of liquid does not have any physic properties.
+     -[Event/Script]Click Area:triggers events or scripts when clicked using mouse.This kind of liquid does not have any physic properties.
+
+Warp
+-Added events for warps.
+-Added a kind of warp requiring a bomb to unlock.
+-Message shown when stars are not enough can now be customed.
+-Added a option to prevent the star count of levels from showing.
+-Added a option to disable the intro animation when warping between levels.
+-Added a option to keep the items held by players when warping between levels.
+-Changes for Warp To Map Location:special values:(0,0) means not moving,(-1,-1) means move to position(0,0).
+
+Block
+-P-Switches no longer triggers Death events of blocks.
+-POW Blocks no longer triggers Hit events of blocks.
+-'?' Blocks can now contain any kind of NPC.
+-Coin amount of '?' Blocks can now be 'infinite' (with a finite amount of time)
+-You can now customize the size of blocks,press Return after inputing the new size in the textbox.
+-If the slope of a slope is greater than 1.1,it creates a horizontal acceleration to players stepping on it.
+
+Player
+-Added Frog Suit.Only available for Mario and Luigi.
+-Added F.L.U.D.D.(Super Mario Sunshine)
+     -There are 3 types of them.Press 'Z' to use them.If you get multiple types,press Shift+S to switch.(Keys are configurable)
+     -They recharges themselves when players touch a liquid with a friction between 0.4 and 0.6.
+     -They are automatically removed after completing a level.If you want to keep it,use global variables and script system.
+
+World
+-You can now limit the use of cheat codes with blacklists and whitelists.
+-You can now make a save file only available to a single computer,and saves from other computers can not be loaded.
+-Added save locking feature:you can specify a rule using expressions.Saves can only be loaded properly when the expressions return True.
+-Added a option to record the level which player was in,when the save is loaded,the game will send players to the recorded position.
+-Added item slots from SMB3.Enable it by setting the max amount of items.Press 'S' to open it in the world map.You can add items in to it using Special Events.
+-You can now disable 2-Player game.
+-You can now disable the function of switching characters on world map.
+-You can now customize the music played in the world map.
+-The music is now not looped in Credits screen.
+-You can now make custom credits,keep it short,since the scrolling speed of text is not changed.
+-If there is a music file 'credits.MP3', it will played in Credit screen.
+-Added 'Forced' option for levels in the world map.'Forced' levels will pull players into them instantly when players step on.
+-You can now use expressions controlling the requirements opening a new path, only global variables can be used in this case.
+-Added level entering conditions.
+     -Use '|' to separate levels in Level FileName,example:world0-1.lvl|world0-5.lvl|Castle.lvl
+     -The first level is numbered '0',and the second one is numbered '1',and so on.
+     -Input condition expressions in the long textbox,and level number in the short textbox.The test continues in order from top to bottom.If no conditions are matched,the game will choose the level numbered '0'.
+     -Level number can also be expressions.Return values are rounded.
+     -For example,you can make levels that can only enter once with this and global variables.
+
+Misc
+-You can customize character names shown in battle mode.
+-Merged 'fill' function to the tool bar in the editor and added several types of tools.
+     -Drawing tools:Rectangle,Andv.Rectangle,Ellipse,Line,Brush(Fill)
+     -Misc tools:Grids,Copy,Paste,Flip
+     -Options:Can blocks/NPCs/Backgrounds/Liquids be selected or not.
+     -Added a protection when using fill function.You will no longer destroy your level.
+-Added Overlap function in the editor.When checked,you can place things over others.
+-Press 'Shift' when selecting objects in editor will no longer pick the object up.
+-Press 'Ctrl' when placing objects on other objects in editor will make the under object copy the properties from the holding object.
+     -This function will not affect positions,size and id.
+     -It can not used on backgrounds in level editing mode.It can only used on levels and tiles in world editing mode.
+-Additions to Section Cloning function
+     -You can now only clone NPCs,blocks,backgrounds and liquids of a section.
+-Additions to Swap function.
+     -Moved the function from Debugger to Level Settings
+     -Can now swap NPCs,backgrounds and blocks.
+-Added Y-Level Wrap
+-Added Y-Scroll Lock
+-Friendly stars are not counted in the debugger.
+-Added a option to set the level player teleports in when death
+-Use PNG graphic files instead of GIF,Alpha channel fully supported.
+     -No longer supports GIF files and '-m' files,they will be automatically converted.
+     -Hint:You can use MarioShop to edit Alpha channels and convert files in large number.
+-Screenshot files are now PNG.
+-Hold 'F11' key in world map editor will show the visible border in the main game.
+-In editor,things in "The Lakitus are throwing Lakitus!" are placed in 'Adv' section of NPC window.
+-Added a simple Debugger for world editing mode.Automatically shows up when you turn the grids on.
+-NPCs hidden in grasses and other things are now drawn transparently instead of blinking in editor.
+-Directions of warps and generators are shown in editor.
+-Added 'Open Game Directory' and 'Reset Camera Position' functions in editor.
+-You can no longer adjust the size of level window in editor.
+-Slightly increased the max amount of some kind of objects.
+-The game will not always occupy a whole CPU core.
+-Playing sounds can no longer cause random lags.
+-Improved Performance.
+-Supported music formats:.aiff, .asf, .dls, .flac, .fsb, .it, .m3u, .mid, .midi, .mod, .mp2, .mp3, .ogg, .raw, .s3m, .vag, .wav, .wma, .xm
+-If an episode exists in the game folder without a name set in the world editor,it will still show up in the game list in the main game,but with gray fonts.
+-Testing levels in editor in fullscreen mode is no longer supported.
+-Number of auto-played characters in title screen is now reduced to one.
+-Custom Files(including GFX,CNPC,etc)will not be reloaded when you test the level.If you want to reload them, please reopen or save the level.
+-Use a new level file format.Old maps can be automatically or manually converted.
+-Moved most of the resource files away from the EXE file.
+-Intro.lvl and outro.lvl are now hidden,but you can still customize them in the old way.
+-Changed some conflicting shortcut keys.
+
+-Added localization files:place them (.lg files) in the same folder smbx.exe in and it will work.
+     -Using them will take a slightly longer time for the editor to start.
+     -These files can only be created using a special tool, you can not edit them directly.
+
+Cheat Codes
+-Added and removed some cheat codes and changed the effects and names of some cheat codes.
+-Cheat codes are disabled in battle mode.
+
+Bugs
+-Fixed the 'Out of Memory' crash when trying to open many level files using an old computer.
+-FIxed the 'Control array element doesn't exist.'crash using the world editor with custom graphics.
+-Fixed the 'Overflow' crash when certain NPCs are fallen into lava.
+-Fixed the 'Overflow' crash when some error CNPC codes are loaded.
+-Fixed the 'Type mismatch' crash when some error CNPC codes are loaded.
+-Fixed the 'Invailed picture','Out of Memory','Cannot create AutoReDraw object' crash when using too much custom graphics in a level using an old computer.
+-Fixed the 'Divided by Zero' crash entering a pipe with a fire piranha plant.
+-FIxed the bug that level corrupts when game crashes saving a level.
+-Fixed the bug that level corrupts when there is '"' in message boxes.
+-Fixed the bug that some irregular MP3 files are not played properly.
+-Fixed the bug that levels in battle mode can be cleared.
+-Fixed the bug that SMW platforms get stuck when overlapped each other.
+-Fixed the bug that some blocks behave improperly when become invisible.
+-Fixed the bug that some NPCs disappear from time to time.
+-Fixed the bug that 'Instant' warps sometimes not working with certain settings.
+-Fixed the bug that some warps placed near the level boundary can make players get stuck.
+-Fixed the bug that if the game failed to refresh the graphics the images from the last frame will remain.
+-Fixed the bug that some looping BGP are not looping properly.
+-Fixed the bug that using a BGP with wrong size will make the graphics out of order.
+-Fixed the bug that you can get too much lives completing a level near a lot of NPCs.
+-Fixed the bug that Pokey will break up when going up a slope.
+-Fixed the bug that invisible blocks still blocks some NPCs up.
+-Fixed the bug that layer status in Layer window in editor is not refreshed on time when testing a level.
+-Fixed the bug that 'mario-5.gif' has an 1-pixel offset.(Since most 'mario-5.gif'in graphic packs now have moved the picture up one pixel,all of them will automatically move one pixel down)
+-Fixed the bug that Level-Start and Auto-Start events are not triggered when players have died once.
+-Fixed the bug that Auto-Scrolling is only available to Level - Start event.
+-Fixed the bug that pressing P-Switch will make the coins and blocks disappear and trigger Death events.
+-Fixed the bug that vines are placed overlapped in editor.
+-Fixed the bug that some CNPC codes can not apply to certain NPCs and some CNPC codes will make them disappear.
+-Fixed some other bugs.
+
+
+
+

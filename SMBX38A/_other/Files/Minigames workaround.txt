@@ -1,0 +1,62 @@
+Minigame 3 - Add arrays
+  Open the level using a text editor and add to the bottom:
+  "R|HEX"
+  -Example: R|%6D%79%41%72%72
+    Will create the array called "myArr"
+
+Minigame 7 - Change message box font color in events
+  Open the level using a text editor. Look for an event object and Using "http://www.unit-conversion.info/texttools/hexadecimal/" and this formula %5C%D% + HEXCOLOR + MESSAGE and set that to the message field HEXCOLOR and MESSAGE must be converted to hexadecimal
+    -Example: E|%6D%79%45%76%65%6E%74|%5C%D%46%46%46%46%38%30%45%78%61%6D%70%6C%65|1,|0///||0,0,0,0,0,0,0,0,0,0,0,0|//|0/0|||,0/0,0,0,0,0/0/
+      -This will set the event "myEvent" with the message with the color "FFFF80" (46%46%46%46%38%30) and the message "Example" (45%78%61%6D%70%6C%65)
+
+Minigame 8 - Extra Special Events
+  Use TeaScript and use the function "SpEvent" and use the one of the following IDs
+    +1045: SMW Yellow Switch - Trigger
+    +1057: SMW Blue Switch - Trigger
+    +1069: SMW Green Switch - Trigger
+    +1073: SMW Red Switch - Trigger
+    +1082: SMB3 Switch Block - Trigger
+    +1089: TimeStop - Activate
+    +1090: TimeStop - Deactivate
+    +1095: Pswitch - Trigger
+    +1102: Pswitch - Stop
+    +1115: Player Invincible Star - Activate
+    +1119: Player Invincible Star - Deactivate
+    +1126: FLUDD - Clear
+    +1135: FLUDD - Exhaust
+    +1141: Player Item Box - Clear
+    +1148: Player Reset State
+    -Example: call SpEvent(1089)
+      -Will activate the time stop effect
+  You could alternatively open the level with a text editor, look for the event object and manually add the special event using the same code
+
+Minigame 11 - Change Effects GFX blend style
+  Open the level using a text editor and add to the bottom:
+  "CE|ID|0065N"
+  *Where ID is the Effect ID
+  *Where N is the blend style code
+    66050:  Add
+    66053:  Add + Alpha
+    197122: Revsubtract
+    197125: Revsubtract + Alpha
+  -Example: CE|2|0065197125
+    -Will set Effect ID 12 to the blend style Revsubtract + Alpha
+
+Minigame 13 - Set BGO priority
+  Open the level using a text editor and add to the bottom:
+    "CT|ID|0065N"
+	  *Where ID is the BGO ID
+	  *Where N is the priority. It must be a number between 0 and 1 (0 is foreground and 1 is background)
+    -Example: CT|12|0065.3
+      -Will set BGO ID 12 with priority of 0.3
+
+SP Function - Change NPCs GFX blend style
+  Use the following NPC code:
+    "blendmode=N"
+    *Where N stands for:
+      66050:  Add
+      66053:  Add + Alpha
+      197122: Revsubtract
+      197125: Revsubtract + Alpha
+    -Example: blendmode=66050
+      -Will set blendmode to "Add"
